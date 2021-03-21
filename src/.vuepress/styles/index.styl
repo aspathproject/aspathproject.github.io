@@ -4,5 +4,15 @@
  * ref：https://v1.vuepress.vuejs.org/config/#index-styl
  */
 
-.home .hero img
-  max-width 450px!important
+.home .hero img {
+  max-width 720px!important;
+  max-height: 350px!important;
+}
+
+
+@media (max-width: 719px) {
+  .home .hero img {
+    max-width 100%!important;
+    max-height: 350px!important;
+  }
+}
