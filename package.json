@@ -1,0 +1,19 @@
+{
+  "name": "aspath-docs",
+  "version": "0.0.1",
+  "description": "ASPATH project website",
+  "main": "index.js",
+  "authors": {
+    "name": "Rodrigo Peña",
+    "email": "lrpena@miuandes.cl"
+  },
+  "repository": "aspath-docs",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.5.3"
+  }
+}
