@@ -31,11 +31,19 @@ module.exports = {
     editLinks: false,
     docsDir: '',
     editLinkText: '',
-    lastUpdated: false,
+    lastUpdated: true,
     nav: [
+      {
+        text: 'Changelog',
+        link: '/changelog/'
+      },
       {
         text: 'ASPATH on Github',
         link: 'https://github.com/aspathproject'
+      },
+      {
+        text: 'Newsletter',
+        link: 'https://www.getrevue.co/profile/aspath'
       }
     ],
     sidebar: {
