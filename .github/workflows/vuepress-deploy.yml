@@ -18,3 +18,4 @@ jobs:
         TARGET_BRANCH: gh-pages
         BUILD_SCRIPT: yarn && yarn build
         BUILD_DIR: src/.vuepress/dist/
+        CNAME: aspath.app
