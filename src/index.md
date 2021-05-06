@@ -3,8 +3,8 @@ home: true
 heroImage: cap.gif
 heroText: Explore route servers evolution over time
 tagline: ASPATH is an internet monitoring tool that aims to increase the visibility over internet exchange points (IXPs) route servers.
-actionText: Quick Start →
-actionLink: /guide/
+actionText: null
+actionLink: null
 features:
 - title: Easy routing table lookup
   details: Search prefixes by length, ASN or even Origin name.
