@@ -61,7 +61,7 @@ module.exports = {
       },
       {
         text: 'LACNIC 35',
-        link: '/lacnic35-presentation'
+        link: '/lacnic35-presentation/'
       }
     ],
     sidebar: {
