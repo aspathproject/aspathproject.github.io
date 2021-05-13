@@ -58,6 +58,10 @@ module.exports = {
       {
         text: 'Newsletter',
         link: 'https://www.getrevue.co/profile/aspath'
+      },
+      {
+        text: 'LACNIC 35',
+        link: '/lacnic35-presentation'
       }
     ],
     sidebar: {
