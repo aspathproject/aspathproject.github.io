@@ -35,18 +35,31 @@ module.exports = {
     ],
   ],
 
+  markdown: {
+    extendMarkdown: md => {
+      md.use(require('markdown-it-task-lists'))
+    }
+  },
+
   /**
    * Theme configuration, here is the default theme configuration for VuePress.
    *
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
   themeConfig: {
-    repo: '',
-    editLinks: false,
-    docsDir: '',
-    editLinkText: '',
+    repo: 'aspathproject/aspathproject.github.io',
+    editLinks: true,
+    docsDir: 'src',
+    docsBranch: 'main',
+    editLinkText: 'Contribute to this page on Github',
     lastUpdated: true,
+    displayAllHeaders: true,
+    sidebarDepth: 3,
     nav: [
+      {
+        text: 'Guide',
+        link: '/guide/'
+      },
       {
         text: 'Changelog',
         link: '/changelog/'
@@ -65,18 +78,22 @@ module.exports = {
         target:'_blank'
       }
     ],
-    sidebar: {
-      '/guide/': [
-        {
-          title: 'Guide',
-          collapsable: false,
-          children: [
-            '',
-            'using-vue',
-          ]
-        }
-      ],
-    }
+    sidebar: [
+      {
+        title: 'Guide',
+        path: '/guide/',
+        children: [
+          '/guide/',
+          '/guide/getting-started',
+          '/guide/directory-structure',
+          '/guide/known-issues'
+        ]
+      },
+      {
+        title: 'Contributors Wanted',
+        path: '/contributors-wanted'
+      }
+    ]
   },
 
   /**
@@ -90,6 +107,12 @@ module.exports = {
       {
          'ga': 'G-5BV2X8V3P4'
       }
-    ]
-  ]
+    ],  
+    ['container', {
+      type: 'vue',
+      before: '<pre class="vue-container"><code>',
+      after: '</code></pre>'
+    }]
+  ],
+
 }
