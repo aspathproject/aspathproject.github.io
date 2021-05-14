@@ -11,7 +11,7 @@ The platform itself won't have any data when it's deployed, so an initial config
 
 
 ### Grabbers
-The back-end component will be in charge of running scheduled jobs to obtain raw datasets from external systems, such as your own route-collectors or also third party datasets, such as [PCH Daily Routing Snapshots](https://www.pch.net/resources/Routing_Data/IPv4_daily_snapshots/). These modules that acquire information from external sources will be called **Grabbers**.
+These back-end modules will be in charge of running scheduled jobs to obtain raw datasets from external systems, such as your own route-collectors or also third party datasets, such as [PCH Daily Routing Snapshots](https://www.pch.net/resources/Routing_Data/IPv4_daily_snapshots/).
 
 Grabber modules will perform the data extraction from the data provider and it will finish it's job when the raw dataset is stored as-is on the Database.
 
