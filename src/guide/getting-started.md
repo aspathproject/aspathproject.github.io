@@ -36,7 +36,6 @@ The following minimum requirements are recommmended:
    ```bash
    cd configuration
    cp aspath.toml.dist aspath.toml
-   git checkout develop
    ```
 
 3. Start application
