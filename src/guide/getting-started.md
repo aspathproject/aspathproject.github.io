@@ -28,12 +28,16 @@ The following minimum requirements are recommmended:
 1. Clone github repository and checkout develop branch and checkout `develop` branch (no stable release available at the moment).
    ```bash
    git clone git@github.com:aspathproject/aspath.git
+   cd aspath
    git checkout develop
    ```
 
-2. Create configuration file:
-
-**WIP**: Initial configuration won't be needed until a data source is added
+2. Create configuration file: copying the example configuration should be enough to start. From the project root folder execute:
+   ```bash
+   cd configuration
+   cp aspath.toml.dist aspath.toml
+   git checkout develop
+   ```
 
 3. Start application
    ```bash
