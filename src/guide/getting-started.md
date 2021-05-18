@@ -38,8 +38,9 @@ The following minimum requirements are recommmended:
    cp aspath.toml.dist aspath.toml
    ```
 
-3. Start application
+3. Build containers and start application
    ```bash
+   docker-compose build
    docker-compose start
    ```
 
@@ -149,12 +150,12 @@ First we will add the route-collector to the database. Currently, an SQL query h
    </code-block>
 
    <code-block title="Expected Output">
-   ```
+   ```sql
    id
    ----
    1
    (1 row)
-
+   
    INSERT 0 1
    ```
    </code-block>
