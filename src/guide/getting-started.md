@@ -40,7 +40,7 @@ The following minimum requirements are recommmended:
 
 3. Build containers and start application
    ```bash
-   docker-compose build
+   docker-compose up --no-start
    docker-compose start
    ```
 
@@ -48,9 +48,9 @@ The following minimum requirements are recommmended:
    
    <code-group>
    <code-block title="Command" active>
-    ```bash
-    docker ps
-    ```
+   ```bash
+   docker ps
+   ```
    </code-block>
 
    <code-block title="Expected Output">
@@ -70,9 +70,9 @@ The following minimum requirements are recommmended:
 
    <code-group>
    <code-block title="Command" active>
-    ```bash
-    docker-compose exec backend masonite-orm migrate:status
-    ```
+   ```bash
+   docker-compose exec backend masonite-orm migrate:status
+   ```
    </code-block>
 
    <code-block title="Expected Output">
@@ -95,22 +95,22 @@ The following minimum requirements are recommmended:
    </code-group>
 
 6. To run pending migrations execute:
-    ```bash
-    docker-compose exec backend masonite-orm migrate
-    ```
+   ```bash
+   docker-compose exec backend masonite-orm migrate
+   ```
 
 7. A restart might be needed after a successful migration. To restart the whole system use the following command
-    ```bash
-    docker-compose restart
-    ```
+   ```bash
+   docker-compose restart
+   ```
 
 8. Deployment should be live now on `0.0.0.0:8080` 🔥 you can do a manual health check locally executing the following command on the docker machine:
 
    <code-group>
    <code-block title="Command" active>
-    ```bash
-    curl localhost:8080/api/
-    ```
+   ```bash
+   curl localhost:8080/api/
+   ```
    </code-block>
 
    <code-block title="Expected Output">

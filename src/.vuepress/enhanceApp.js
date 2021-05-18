@@ -3,6 +3,11 @@
  *
  * https://v1.vuepress.vuejs.org/guide/basic-config.html#app-level-enhancements
  */
+import Vue from 'vue'
+import CodeBlock from "@theme/global-components/CodeBlock.vue"
+import CodeGroup from "@theme/global-components/CodeGroup.vue"
+Vue.component(CodeBlock)
+Vue.component(CodeGroup)
 
 export default ({
   Vue, // the version of Vue being used in the VuePress app
