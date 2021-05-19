@@ -140,6 +140,7 @@ First we will add the route-collector to the database. Currently, an SQL query h
 
 3. Execute an insert query to add an internet exchange to the database
 
+   <ClientOnly>
    <code-group>
    <code-block title="Command" active>
    ```sql
@@ -160,6 +161,7 @@ First we will add the route-collector to the database. Currently, an SQL query h
    ```
    </code-block>
    </code-group>
+   </ClientOnly>
 
    "PIT Chile" will be the display name in the platform while the `slug` value ('pit-chile' in the example) will be the url-friendly name of the internet exchange.
 
