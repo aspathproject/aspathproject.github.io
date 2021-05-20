@@ -1,20 +1,7 @@
-const { description } = require('../../package')
-
 module.exports = {
-  /**
-   * Ref：https://v1.vuepress.vuejs.org/config/#title
-   */
+  lang: 'en-US',
   title: 'ASPATH Project',
-  /**
-   * Ref：https://v1.vuepress.vuejs.org/config/#description
-   */
-  description: description,
-
-  /**
-   * Extra tags to be injected to the page HTML `<head>`
-   *
-   * ref：https://v1.vuepress.vuejs.org/config/#head
-   */
+  description: 'ASPATH project website',
   head: [
     ['meta', { name: 'theme-color', content: '#3eaf7c' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
@@ -34,20 +21,11 @@ module.exports = {
         ],
     ],
   ],
-
-  markdown: {
-    extendMarkdown: md => {
-      md.use(require('markdown-it-task-lists'))
-    }
+  extendsMarkdown: (md) => {
+    md.use(require('markdown-it-task-lists'))
   },
-
-  /**
-   * Theme configuration, here is the default theme configuration for VuePress.
-   *
-   * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
-   */
   themeConfig: {
-    repo: 'aspathproject/aspathproject.github.io',
+    docsRepo: 'aspathproject/aspathproject.github.io',
     editLinks: true,
     docsDir: 'src',
     docsBranch: 'main',
@@ -55,7 +33,8 @@ module.exports = {
     lastUpdated: true,
     displayAllHeaders: true,
     sidebarDepth: 3,
-    nav: [
+    logo: null,
+    navbar: [
       {
         text: 'Guide',
         link: '/guide/'
@@ -80,39 +59,19 @@ module.exports = {
     ],
     sidebar: [
       {
-        title: 'Guide',
-        path: '/guide/',
+        text: 'Guide',
+        link: '/guide/',
+        isGroup: true,
         children: [
-          '/guide/',
-          '/guide/getting-started',
-          '/guide/directory-structure',
-          '/guide/known-issues'
+          '/guide/getting-started.md',
+          '/guide/directory-structure.md',
+          '/guide/known-issues.md'
         ]
       },
       {
-        title: 'Contributors Wanted',
-        path: '/contributors-wanted'
+        text: 'Contributors Wanted',
+        link: '/contributors-wanted.md'
       }
     ]
-  },
-
-  /**
-   * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
-   */
-  plugins: [
-    '@vuepress/plugin-back-to-top',
-    '@vuepress/plugin-medium-zoom',
-    [
-      '@vuepress/google-analytics',
-      {
-         'ga': 'G-5BV2X8V3P4'
-      }
-    ],  
-    ['container', {
-      type: 'vue',
-      before: '<pre class="vue-container"><code>',
-      after: '</code></pre>'
-    }]
-  ],
-
+  }
 }
