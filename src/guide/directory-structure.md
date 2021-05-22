@@ -4,10 +4,7 @@ ASPATH projects follows a single-folder pattern, meaning that all components wil
 
 This allows to make a whole system backup (including software and data) just by archiving the parent folder.
 
-<!-- textlint-disable terminology -->
-
-::: vue
-.
+```
 ├── backend
 │   ├── app
 ├── frontend
@@ -17,9 +14,7 @@ This allows to make a whole system backup (including software and data) just by 
 │   ├── aspath.toml
 │   ├── aspath.dist.toml
 └── docker-compose.yml
-:::
-
-<!-- textlint-enable -->
+```
 
 - `backend/app`: Python FastAPI backend folder. Also contains parser, grabber and ingester modules.
 - `frontend`: NuxtJS frontend folder.
